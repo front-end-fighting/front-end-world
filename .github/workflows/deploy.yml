@@ -1,56 +1,34 @@
-name: Deploy site files
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - sourcecode # 只在master上push触发部署
-    paths-ignore: # 下列文件的变更不触发部署，可以自行添加
-      - README.md
-      - LICENSE
+      - sourcecode  # Set a branch to deploy
+    # paths-ignore: # 下列文件的变更不触发部署，可以自行添加，测试时可关闭
+    #   - README.md
+    #   - LICENSE
   pull_request:
     branches:
       - sourcecode # 只在master上push触发部署
     types: [closed]
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x]
-
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
         with:
-          repo-token: ${{ secrets.DEPLOY_TOKEN }}
+          persist-credentials: false
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-          
-      - name: Install dependencies
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
-          npm i
-      - name: Build
-        run: |
+          npm install
           npm run build
           cp README.md docs/.vuepress/dist/
-          cd docs/.vuepress/dist
-      - name: Git init
-        run: |
-          git config --global user.name 'godbasin'
-          git config --global user.email 'wangbeishan@163.com'
-          git init
-      - name: Git Add and Commit
-        run: |
-          git add -A
-          git commit -m 'deploy'
-      - name: Git Remote Add
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        run: |
-          git remote add origin https://github.com/front-end-fighting/front-end-world.git
-      - name: Git Push
-        run: |
-          git push origin master -f
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # 自己仓库设置的token
+          BRANCH: gh-pages # 需要部署的分支
+          FOLDER: docs/.vuepress/dist # 部署的文件位置
+          CLEAN: true # 自动清理
