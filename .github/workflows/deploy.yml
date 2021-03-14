@@ -37,20 +37,10 @@ jobs:
           npm run build
           cp README.md docs/.vuepress/dist/
           cd docs/.vuepress/dist
-      - name: Git init
-        run: |
-          git config --global user.name 'godbasin'
-          git config --global user.email 'wangbeishan@163.com'
-          git init
-      - name: Git Add and Commit
-        run: |
-          git add -A
-          git commit -m 'deploy'
-      - name: Git Remote Add
-        env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-        run: |
-          git remote add origin https://github.com/front-end-fighting/front-end-world.git
-      - name: Git Push
-        run: |
-          git push origin master -f
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          BRANCH: master # The branch the action should deploy to.
+          FOLDER: docs/.vuepress/dist/
+          CLEAN: true
