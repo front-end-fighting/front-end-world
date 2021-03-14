@@ -20,6 +20,7 @@
 ### 注意事项
 - 一人写，至少要有另外一人 review，请在 markdown 文档头部描述作者和校验者 github ID
 - **引用其他文章内容，必须注明来源**
+- **大家尽量可以尝试写自己的理解，避免全都是复制粘贴哈，将内容消化了才能有更多收获**
 - 请通过 [MR](https://github.com/front-end-fighting/front-end-world/compare) 的方式，提交自己的内容
 
 
