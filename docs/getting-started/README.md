@@ -1,49 +1,17 @@
-# 前端入门
+# 第 1 章　前端必备知识与技能
 
-## 前端基本技能
+对于一个前端开发来说，掌握一些前端必备的知识和技能是最基础的。即使这些年来前端的技术栈不断地进行更新换代，但最基础的能力、核心的能力依然没有太大的变化。在日常工作中，常常使用到的还是 HTML/CSS/Javascript 相关的基础内容、代码开发和调试技巧的掌握等。
 
-- HTML
-  - [基本语法](./basic-skills/html/basic-grammar.md)
-- CSS
-  - [盒模型](./basic-skills/css/box-model.md)
-  - 内联元素/块状元素
-  - 文档流
-  - 浮动 float
-  - 元素堆叠
-  - 块格式化上下文(BFC)
-  - 响应式布局
-  - Flex 布局
-  - Grid 布局
-  - CSS 动画
-- JavaScript
-  - [基本语法](./basic-skills/javascript/basic-grammar.md)
-  - 基本类型
-  - Javascript 对象
-  - 原型和继承
-  - 作用域
-  - 闭包
-  - this
-  - ES6+
-  - 单线程与异步 JavaScript
-  - DOM/BOM API
+在介绍这些之前，我们还需要对前端领域有一个比较基本的了解。
 
-## 前端基础知识
+## [1.1 前端都能做些什么](./1.md)
 
-- 浏览器
-  - [浏览器 DOM 事件流](./basic-knowledge/browser/dom-events.md)
-  - 浏览器加载顺序
-  - 浏览器渲染过程
-  - 浏览器 EventLoop
-  - 浏览器同源策略
-  - 跨域方案/CORS
-  - 浏览器缓存
-  - 常见调试技巧
-- HTTP/Ajax
-  - [HTTP 请求过程](./basic-knowledge/http/http-request.md)
-  - 常见 HTTP 协议
-  - HTTP 1.0/HTTP 1.1/HTTP2/HTTP3
-- Node.js
-- Web 安全
-  - [XSS](./basic-knowledge/security/xss.md)
-  - CSRF
-  - 其他（SQL 注入/DDoS 等）
+## [1.2 基础知识的具备](./2/2.1.md)
+
+对于程序员来说，专业能力不可或缺，它决定了我们能在这个行业里走多远。而对于前端开发来说，的确也需要掌握很多的基础知识，也在不断地学习新的知识。
+
+属于前端的基础知识其实也不少，除了大家都知道的必备三剑客 Javascript/CSS/HTML，我们还需要知道浏览器机制、HTTP 协议与 Ajax 请求、代码编写和调试等技巧。如果你的目的是想要找到一份工作，那么可以更加关注《第 7 章 找工作要准备些什么》，本章我们主要介绍作为前端日常工作中需要掌握的一些基础知识。
+
+## [1.3 前端基础开发技巧](./3/3.1.md)
+
+

@@ -25,155 +25,44 @@ module.exports = {
         editLinkText: '我想完善该文章！',
         nav: [
             { text: '概述', link: '/' },
-            { text: '前端入门', link: '/getting-started/' },
-            { text: '前端项目开发', link: '/project-develop/' },
-            { text: '前端项目优化', link: '/project-improve/' },
-            { text: '前端面试', link: '/interview/' },
+            { text: '内容', link: '/getting-started/' },
             { text: '其他资源', link: '/playground' },
             { text: '参与贡献', link: '/how-to-contribute' },
         ],
         sidebar: {
             '/getting-started/': [
                 {
-                    title: '前端基本技能',
+                    title: '第 1 章 前端必备知识与技能',
                     collapsable: true,
                     children: [{
-                        title: 'HTML',
+                        title: '1.1 前端都能做些什么',
                         collapsable: true,
                         children: [
-                            '/getting-started/basic-skills/html/basic-grammar.md',
+                            '/getting-started/1.md',
                         ]
                     }, {
-                        title: 'CSS',
+                        title: '1.2 基础知识的具备',
                         collapsable: true,
                         children: [
-                            '/getting-started/basic-skills/css/box-model.md',
+                            '/getting-started/2/2.1.md',
+                            '/getting-started/2/2.2.md',
+                            '/getting-started/2/2.3.md',
+                            '/getting-started/2/2.4.md',
+                            '/getting-started/2/2.5.md',
+                            '/getting-started/2/2.6.md',
+                            '/getting-started/2/2.7.md',
                         ]
                     }, {
-                        title: 'JavaScript',
+                        title: '1.3 前端基础开发技巧',
                         collapsable: true,
                         children: [
-                            '/getting-started/basic-skills/javascript/basic-grammar.md',
-                        ]
-                    }]
-                }, {
-                    title: '前端基本知识',
-                    collapsable: true,
-                    children: [{
-                        title: '浏览器',
-                        collapsable: true,
-                        children: [
-                            '/getting-started/basic-knowledge/browser/dom-events.md',
-                        ]
-                    }, {
-                        title: 'HTTP/Ajax',
-                        collapsable: true,
-                        children: [
-                            '/getting-started/basic-knowledge/http/http-request.md',
-                        ]
-                    }, {
-                        title: 'Node.js',
-                        collapsable: true,
-                        children: [
-                            '/getting-started/basic-knowledge/nodejs/demo.md',
-                        ]
-                    }, {
-                        title: 'Web安全',
-                        collapsable: true,
-                        children: [
-                            '/getting-started/basic-knowledge/security/xss.md',
+                            '/getting-started/3/3.1.md',
+                            '/getting-started/3/3.2.md',
+                            '/getting-started/3/3.3.md',
                         ]
                     }]
                 }
             ], 
-            '/project-develop/': [
-                {
-                    title: '项目基本知识',
-                    collapsable: true,
-                    children: [
-                        '/project-develop/project-knowledge/develop-process.md',
-                    ]
-                }, {
-                    title: '项目技术栈',
-                    collapsable: true,
-                    children: [{
-                        title: '前端框架',
-                        collapsable: true,
-                        children: [
-                            '/project-develop/project-technology/framework/vue.md',
-                        ]
-                    }, {
-                        title: '小程序开发',
-                        collapsable: true,
-                        children: [
-                            '/project-develop/project-technology/miniprogram/wechat.md',
-                        ]
-                    }, {
-                        title: '前端应用',
-                        collapsable: true,
-                        children: [
-                            '/project-develop/project-technology/application/module.md',
-                        ]
-                    }, {
-                        title: '前端构建',
-                        collapsable: true,
-                        children: [
-                            '/project-develop/project-technology/build/webpack.md',
-                        ]
-                    }]
-                }
-            ], 
-            '/project-improve/': [
-                {
-                    title: '前端测试',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/project-test/unit.md',
-                    ]
-                }, {
-                    title: '前端发布',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/project-publish/demo.md',
-                    ]
-                }, {
-                    title: '前端工程化',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/project-engineer/demo.md',
-                    ]
-                }, {
-                    title: '性能提升',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/performance-improve/demo.md',
-                    ]
-                }, {
-                    title: '开发效能提升',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/develop-efficiency-improve/demo.md',
-                    ]
-                }, {
-                    title: '设计模式',
-                    collapsable: true,
-                    children: [
-                        '/project-improve/design-pattern/demo.md',
-                    ]
-                }
-            ], 
-            '/interview/': [
-                {
-                    title: '面试题库',
-                    collapsable: true,
-                    children: [
-                        '/interview/question-bank/demo.md',
-                    ]
-                }, {
-                    title: '面试准备参考',
-                    path: 'https://godbasin.github.io/front-end-playground/front-end-work/interview/interview-1-ready.html'
-                }
-            ]
         }
     },
 
